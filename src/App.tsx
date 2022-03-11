@@ -1,25 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Layout} from "antd";
+import Carduri from "./layout/Carduri";
+import Header from "./layout/Header";
+import './App.css';
+import 'antd/dist/antd.css'
+import {Footer} from "antd/es/layout/layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Chieaev Leonid CR-192
-        </a>
-      </header>
-    </div>
+<Layout>
+  <Header/>
+  <Carduri/>
+  <Footer>Chieaev Leonid CR-192 :)</Footer>
+</Layout>
   );
 }
 
