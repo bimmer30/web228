@@ -1,29 +1,27 @@
-import { Row } from 'antd';
-import Style from './Style';
-const text = [
-    {id: 1, title: "Card title 1", text: "text"
-    },
-    {id: 2, title: "Card title 2", text: "text"
-    },
-    {id: 3, title: "Card title 3", text: "text"
-    },
 
-]
+import {Breadcrumb, Row} from 'antd';
+import {Style} from './Style';
+import {useRootStore} from "../index";
+import {IContentModel} from "../interface/Interfaces";
 
-
-function Carduri() {
+export  const  Carduri = () => {
+    const {texts} = useRootStore()
+    console.log(">>root_store",texts)
     return (
 
-        <Row gutter={16} >
-            {
-                text.map((element, i) => {
+        <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+            <Row gutter={16} >
+                {texts.map((text:IContentModel) => {
                     return (
-                        <Style key={element.id} title={element.title} text={element.text}/>
+                        <Style key={text.id} content={text}/>
                     )
-                })
-            }
-        </Row>
+                } )}
+
+            </Row>
+
+        </div>
+
+
+
     )
 }
-
-export default Carduri

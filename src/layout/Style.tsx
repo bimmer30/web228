@@ -1,17 +1,26 @@
 import { Card, Col } from 'antd'
-function Style({title, text}:{title:string,text:string}) {
+import { Checkbox,  Input} from 'antd'
+import { IContentModel} from "../interface/Interfaces";
+import {observer} from "mobx-react-lite";
+import {useEffect} from "react";
+//Style
+export const Style=observer(({content}:{content:IContentModel}) => {
 
-    return (
-
-        <Col span={8}>
-            <div style={{ paddingBottom: '8px',paddingTop:'8px'}}>
-                <Card title={title} bordered={false}>
-                    {text}
-                </Card>
-            </div>
-        </Col>
-
-    )
-}
-
-export default Style
+        const {title,description,notite,changeNotes,isSeen,changeSeen} =content
+        useEffect(()=>{
+            if(isSeen) {
+                alert(`Is seen ${ title }`)
+            }
+        },[isSeen])
+        return (
+            <Card title={title} bordered={false}>
+                {description}
+                <Input value={notite}
+                       placeholder={notite}
+                       onChange={(e)=>changeNotes(e.target.value)}
+                />
+                <Checkbox defaultChecked={ isSeen } checked={isSeen} onChange={(e)=>changeSeen(e.target.checked)}/>
+            </Card>
+        )
+    }
+)
