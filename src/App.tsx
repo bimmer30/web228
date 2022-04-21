@@ -17,7 +17,7 @@ function App() {
   <Carduri/>
   <FormMy/>
 
-  <Footer>Chieaev Leonid CR-192 :)</Footer>
+  <Footer>Chieaev Leonid CR-192 :),Lab4</Footer>
 </Layout>
   );
 }
