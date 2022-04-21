@@ -7,13 +7,17 @@ import Header from "./layout/Header";
 import './App.css';
 import 'antd/dist/antd.css'
 import {Footer} from "antd/es/layout/layout";
+import {FormMy} from "./layout/FormMy";
 
 function App() {
   return (
 <Layout>
   <Header/>
+
   <Carduri/>
-  <Footer>Chieaev Leonid CR-192 :)</Footer>
+  <FormMy/>
+
+  <Footer>Chieaev Leonid CR-192 :),Lab4</Footer>
 </Layout>
   );
 }
