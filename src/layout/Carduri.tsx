@@ -7,6 +7,19 @@ const text = [
     },
     {id: 3, title: "Card title 3", text: "text"
     },
+    {id: 4, title: "Card title 4", text: "text"
+    },
+    {id: 5, title: "Card title 5", text: "text"
+    },
+    {id: 6, title: "Card title 6", text: "text"
+    },
+    {id: 7, title: "Card title 7", text: "text"
+    },
+    {id: 8, title: "Card title 8", text: "text"
+    },
+    {id: 9, title: "Card title 9", text: "text"
+    },
+
 
 ]
 
