@@ -15,7 +15,7 @@ function App() {
   <Header/>
 
   <Carduri/>
-  <FormMy/>
+  {/*<FormMy/>*/}
 
   <Footer>Chieaev Leonid CR-192 :),Lab4</Footer>
 </Layout>
