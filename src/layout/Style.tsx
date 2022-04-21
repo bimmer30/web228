@@ -1,5 +1,5 @@
 import { Card, Col } from 'antd'
-function Style({title, text}) {
+function Style({title, text}:{title:string,text:string}) {
 
     return (
 
